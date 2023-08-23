@@ -9,4 +9,7 @@
     <string name="priduct_discount_rate">10%</string>
     <string name="priduct_brand_name">twg. official</string>
     <string name="btn_product_detail">상품 상세</string>
+    <string name="navigation_category">카테고리</string>
+    <string name="navigation_home">홈</string>
+    <string name="navigation_cart">카트</string>
 </resources>
