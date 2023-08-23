@@ -65,4 +65,8 @@
     <style name="TextCaption2.Grey04" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textColor">@color/shoppi_grey_04</item>
     </style>
+
+    <style name="Theme.Greencamp.splash">
+        <item name="android:windowBackground">@drawable/background_splash_screen</item>
+    </style>
 </resources>
