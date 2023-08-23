@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">greencamp</string>
+    <string name="description_product_detail">상품 상세 대표 이미지</string>
+    <string name="product_lable">[19차 리오더] 페이크 레더 숏 테일러 자켓 블랙(1 color)</string>
+    <string name="product_price">110,000원</string>
+    <string name="product_detail_image_title">상품 설명</string>
+    <string name="product_detail_image">상품 상세 이미지</string>
+    <string name="product_discount_price">99,800원</string>
+    <string name="priduct_discount_rate">10%</string>
+    <string name="priduct_brand_name">twg. official</string>
 </resources>
