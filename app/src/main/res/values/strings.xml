@@ -8,4 +8,5 @@
     <string name="product_discount_price">99,800원</string>
     <string name="priduct_discount_rate">10%</string>
     <string name="priduct_brand_name">twg. official</string>
+    <string name="btn_product_detail">상품 상세</string>
 </resources>
