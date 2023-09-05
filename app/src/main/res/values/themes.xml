@@ -7,6 +7,14 @@
 
     <style name="Theme.Greencamp" parent="Base.Theme.Greencamp" />
 
+    <style name="TextHeadline5.Black02" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/shoppi_black_02</item>
+    </style>
+
+    <style name="TextHeadline5.Black02.Bold" >
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="TextMedium" parent="TextAppearance.AppCompat.Medium">
         <item name="android:textColor">@color/shoppi_black_01</item>
     </style>
