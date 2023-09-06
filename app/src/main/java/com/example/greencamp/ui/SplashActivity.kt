@@ -1,4 +1,4 @@
-package com.example.greencamp
+package com.example.greencamp.ui
 
 import android.content.Intent
 import android.os.Bundle

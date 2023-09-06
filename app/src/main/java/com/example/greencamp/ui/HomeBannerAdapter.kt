@@ -1,4 +1,4 @@
-package com.example.greencamp
+package com.example.greencamp.ui
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.greencamp.Banner
+import com.example.greencamp.R
 import java.text.DecimalFormat
 import kotlin.math.roundToInt
 
