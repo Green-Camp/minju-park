@@ -1,6 +1,6 @@
 package com.example.greencamp.repository
 
-import com.example.greencamp.HomeData
+import com.example.greencamp.model.HomeData
 
 class HomeRepository(
     private val assetDataSource: HomeAssetDataSource,

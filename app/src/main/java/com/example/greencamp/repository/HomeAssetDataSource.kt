@@ -1,7 +1,7 @@
 package com.example.greencamp.repository
 
 import com.example.greencamp.AssetLoader
-import com.example.greencamp.HomeData
+import com.example.greencamp.model.HomeData
 import com.google.gson.Gson
 
 class HomeAssetDataSource(private val assetLoader: AssetLoader) : HomeDataSource {

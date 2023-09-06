@@ -15,4 +15,6 @@
     <string name="description_appbar_home_icon">홈화면 앱바 아이콘</string>
     <string name="description_home_banner_image">홈화면 배너 이미지</string>
     <string name="description_home_banner_thumbnail">홈화면 배너 썸네일</string>
+    <string name="unit_discount_rate">%d%%</string>
+    <string name="unit_discount_currency">%s원</string>
 </resources>

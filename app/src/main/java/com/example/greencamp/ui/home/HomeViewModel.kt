@@ -1,10 +1,10 @@
-package com.example.greencamp.ui
+package com.example.greencamp.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.greencamp.Banner
-import com.example.greencamp.Title
+import com.example.greencamp.model.Banner
+import com.example.greencamp.model.Title
 import com.example.greencamp.repository.HomeRepository
 
 class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel() {

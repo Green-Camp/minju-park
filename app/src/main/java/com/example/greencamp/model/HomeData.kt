@@ -1,4 +1,4 @@
-package com.example.greencamp
+package com.example.greencamp.model
 
 import com.google.gson.annotations.SerializedName
 

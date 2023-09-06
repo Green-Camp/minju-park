@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/iv_banner_image"
-        android:layout_width="312dp"
-        android:layout_height="343dp"
-        android:layout_marginStart="16dp"
-        android:contentDescription="@string/description_home_banner_image"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
+        <variable
+            name="banner"
+            type="com.example.greencamp.model.Banner" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_banner_image"
+            imageUrl="@{banner.backgroundImageUrl}"
+            android:layout_width="312dp"
+            android:layout_height="343dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/description_home_banner_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_banner_badge"
@@ -23,6 +32,7 @@
         android:layout_marginBottom="7dp"
         android:paddingStart="7dp"
         android:paddingTop="1dp"
+        android:background="@{banner.badge.backgroundColor}"
         android:paddingEnd="7dp"
         android:paddingBottom="1dp"
         android:textColor="@color/shoppi_white"
@@ -37,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
+        android:text="@{banner.label}"
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@id/bg_banner_product_detail"
         app:layout_constraintEnd_toEndOf="@id/iv_banner_image"
@@ -74,6 +85,7 @@
         android:layout_marginEnd="16dp"
         android:ellipsize="end"
         android:maxLines="1"
+        android:text="@{banner.productDetail.brandName}"
         app:layout_constraintEnd_toEndOf="@id/bg_banner_product_detail"
         app:layout_constraintStart_toEndOf="@id/iv_banner_detail_thumbnail"
         app:layout_constraintTop_toTopOf="@id/bg_banner_product_detail"
@@ -82,6 +94,7 @@
     <TextView
         android:id="@+id/tv_banner_detail_product_label"
         android:layout_width="0dp"
+        android:text="@{banner.productDetail.label}"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         app:layout_constraintEnd_toEndOf="@id/tv_banner_detail_brand_label"
@@ -94,27 +107,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
+        android:text="@{@string/unit_discount_rate(banner.productDetail.discountRate)}"
         app:layout_constraintStart_toStartOf="@id/tv_banner_detail_product_label"
         app:layout_constraintTop_toBottomOf="@id/tv_banner_detail_product_label"
         tools:text="9%" />
 
-    <TextView
-        android:id="@+id/tv_banner_detail_product_discount_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_banner_detail_product_discount_rate"
-        app:layout_constraintStart_toEndOf="@id/tv_banner_detail_product_discount_rate"
-        tools:text="89,000원" />
+        <TextView
+            android:id="@+id/tv_banner_detail_product_discount_price"
+            discountRate="@{banner.productDetail.discountRate}"
+            priceAmount="@{banner.productDetail.price}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_banner_detail_product_discount_rate"
+            app:layout_constraintStart_toEndOf="@id/tv_banner_detail_product_discount_rate"
+            tools:text="89,000원" />
 
-    <TextView
-        android:id="@+id/tv_banner_detail_product_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_banner_detail_product_discount_price"
-        app:layout_constraintStart_toEndOf="@id/tv_banner_detail_product_discount_price"
-        tools:text="100,000원" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_banner_detail_product_price"
+            priceAmount="@{banner.productDetail.price}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_banner_detail_product_discount_price"
+            app:layout_constraintStart_toEndOf="@id/tv_banner_detail_product_discount_price"
+            tools:text="100,000원" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
